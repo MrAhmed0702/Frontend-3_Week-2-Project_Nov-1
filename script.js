@@ -9,10 +9,22 @@ document.addEventListener('DOMContentLoaded', () => {
         const data = await getMenu();
         menuData = data;
         renderMenu(data);
-        await takeOrder();
-        await orderPrep();
-        await payOrder();
-        thankYou();
+
+        try {
+            const takenOrder = await takeOrder();
+            console.log("Order taken successfully:", takenOrder);
+
+            const prepStatus = await orderPrep(takenOrder);
+            console.log("Order prepared:", prepStatus);
+
+            const paymentStatus = await payOrder(prepStatus);
+            console.log("Payment done:", paymentStatus);
+
+            thankYou();
+
+        } catch (error) {
+            console.error("Error:", error);
+        }
     }
 
     const getMenu = async () => {
@@ -28,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const takeOrder = async () => {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
-                if(Object.keys(order).length > 0) {
+                if (Object.keys(order).length > 0) {
                     resolve(order);
                 } else {
                     reject("No items were ordered.");
@@ -37,12 +49,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    const orderPrep = async () => {
+    const orderPrep = async (order) => {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                for (let key in order) {
+                    console.log(`Preparing the order: ${order[key].name} x${order[key].quantity}`);
+                }
+                resolve({ order_status: true, paid: false });
+            }, 1500);
+        });
+    };
 
-    }
 
     const payOrder = async () => {
-
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                
+            }, 1000);
+        });
     }
 
     const thankYou = () => {
@@ -81,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else {
                     order[itemId] = {
                         name: item.name,
-                        unitPrice: item.price, 
+                        unitPrice: item.price,
                         quantity: 1,
                         totalPrice: item.price
                     }
