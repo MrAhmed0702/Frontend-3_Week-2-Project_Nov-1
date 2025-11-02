@@ -1,18 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restuarnt Website</title>
     <link rel="stylesheet" href="styleMenu.css">
 </head>
-<body>
-    <h2>Menu</h2>
-    <div id="menu-container"></div>
 
-    <button id="place-order-btn">Place Order</button>
-    
+<body>
+
+    <header>
+        <nav>
+            <input type="text" placeholder="🔍 Search Food Item" />
+            <div class="auth-buttons">
+                <button class="signup-btn">Signup</button>
+                <button class="login-btn">Login</button>
+                <img src="icon.png" alt="User Icon" class="user-icon" />
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <aside>
+
+            <div class="logo-section">
+                <img src="icon.png" alt="Restaurant Logo" class="logo-img" />
+                <h2>Your Restaurant Menu</h2>
+                <p>Your Slogan</p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <h3>Quick Links</h3>
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="#">Your Orders</a></li>
+                    <li><a href="#">Wallet</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Logout</a></li>
+                </ol>
+
+                <h3>More About Us</h3>
+
+                <ol>
+                    <li><a href="#">Our Blog</a></li>
+                    <li><a href="#">Upcoming Dishes</a></li>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Social Media Links</a></li>
+                </ol>
+            </nav>
+
+        </aside>
+
+        <main>
+            <section class="menu-section">
+                <h2>Menu</h2>
+
+                <div id="menu-container"></div>
+
+                <button id="place-order-btn">Place Order</button>
+            </section>
+
+        </main>
+    </div>
 
     <script src="scriptMain.js"></script>
 </body>
+
 </html>
