@@ -1,17 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restuarnt Website</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Restaurant Website</title>
+    <link rel="stylesheet" href="styleHome.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
 </head>
+
 <body>
-    <h2>Menu</h2>
-    <div id="menu-container"></div>
+    <header>
+        <nav>
+            <input type="text" placeholder="🔍 Search Food Item" />
+            <div class="auth-buttons">
+                <button class="signup-btn">Signup</button>
+                <button class="login-btn">Login</button>
+                <img src="icon.png" alt="User Icon" class="user-icon" />
+            </div>
+        </nav>
+    </header>
 
-    <button id="place-order-btn">Place Order</button>
+    <div class="container">
 
-    <script src="script.js"></script>
+        <aside>
+
+            <div class="logo-section">
+                <img src="icon.png" alt="Restaurant Logo" class="logo-img" />
+                <h2>Your Restaurant Menu</h2>
+                <p>Your Slogan</p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <h3>Quick Links</h3>
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="#">Your Orders</a></li>
+                    <li><a href="#">Wallet</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Logout</a></li>
+                </ol>
+
+                <h3>More About Us</h3>
+
+                <ol>
+                    <li><a href="#">Our Blog</a></li>
+                    <li><a href="#">Upcoming Dishes</a></li>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Social Media Links</a></li>
+                </ol>
+            </nav>
+
+        </aside>
+
+        <main>
+
+            <section class="hero-section">
+                <img src="heroSection.png" alt="Weekend Special Delicious Food Menu" />
+            </section>
+
+            <section class="menu-section">
+                <h2>Menu</h2>
+
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="/vegBurger.jpg" alt="Veg Burger" />
+                        <div class="menu-item-info">
+                            <h4>Veg Burger</h4>
+                            <p>$5.99/-</p>
+                        </div>
+                        <button class="add-btn">+</button>
+                    </div>
+
+                    <div class="menu-item">
+                        <img src="/chickenBurger.jpg" alt="Chicken Burger" />
+                        <div class="menu-item-info">
+                            <h4>Chicken Burger</h4>
+                            <p>$8.99/-</p>
+                        </div>
+                        <button class="add-btn">+</button>
+                    </div>
+
+                    <div class="menu-item">
+                        <img src="/pizzaBurger.jpg" alt="Pizza Burger" />
+                        <div class="menu-item-info">
+                            <h4>Pizza Burger</h4>
+                            <p>$10.99/-</p>
+                        </div>
+                        <button class="add-btn">+</button>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <footer>
+        <!-- Footer content if needed -->
+    </footer>
 </body>
+
 </html>
