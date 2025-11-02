@@ -1,7 +1,7 @@
-````markdown
 # Food Ordering Web App 🍔
 
-A lightweight, interactive food ordering application built with vanilla JavaScript. Users can browse a dynamic menu, manage their orders, and experience a simulated order lifecycle including preparation and payment.
+A lightweight, interactive food ordering application built with vanilla JavaScript.
+Users can browse a dynamic menu, manage their orders, and experience a simulated order lifecycle including preparation and payment.
 
 ---
 
@@ -53,18 +53,18 @@ The focus is on clean, modular JavaScript, proper state management, and asynchro
 
 ---
 
-## Installation
 
+## Installation
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/food-ordering-app.git
-````
+git clone https://github.com/your-username/Frontend-3_Week-2-Project_Nov-1.git
+```
 
 2. Navigate into the project:
 
 ```bash
-cd food-ordering-app
+cd Frontend-3_Week-2-Project_Nov-1
 ```
 
 3. Open `index.html` in any modern browser.
